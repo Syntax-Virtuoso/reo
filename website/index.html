@@ -15,7 +15,7 @@
         <section class="max-w-7xl mx-auto p-1 flex items-center">
             <img src="assets/Reo-logo.png" alt="Reo" class="h-[50px] w-[50px] mr-2">
             <h1 class="text-4xl mr-auto corinthia">REO</h1>
-            <div class="flex space-x-2">
+            <div class="sm:hidden md:flex md:space-x-2">
                 <div class="bg-slate-500 rounded-lg p-2 hover:bg-lime-400">
                     <a class="text-md" href="https://reo-lang.vercel.app/" target="_blank">Home</a>
                 </div>
@@ -44,6 +44,38 @@
                     <a class="text-md" href="https://reo-lang.vercel.app/contact" target="_blank">Contact</a>
                 </div>
             </div>
+            <div class="md:hidden sm:flex sm:space-x-2">
+                <div class="flex items-center justify-between p-4">
+                    <button class="hamburger-menu p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mobile-menu hidden bg-slate-500 space-y-2 p-4 rounded-lg">
+                    <div class="hover:bg-lime-400">
+                        <a class="text-md" href="https://reo-lang.vercel.app/" target="_blank">Home</a>
+                    </div>
+                    <div class="hover:bg-orange-400">
+                        <a class="text-md" href="https://reo-lang.vercel.app/about" target="_blank">About</a>
+                    </div>
+                    <div class="hover:bg-blue-400">
+                        <a class="text-md" href="https://reo-lang.vercel.app/documentation" target="_blank">Documentation</a>
+                    </div>
+                    <div class="hover:bg-red-400">
+                        <a class="text-md" href="https://reo-lang.vercel.app/features" target="_blank">Features</a>
+                    </div>
+                    <div class="hover:bg-pink-400">
+                        <a class="text-md" href="https://reo-lang.vercel.app/download" target="_blank">Download</a>
+                    </div>
+                    <div class="hover:bg-teal-400">
+                        <a class="text-md" href="https://reo-lang.vercel.app/updates" target="_blank">Updates</a>
+                    </div>
+                    <div class="hover:bg-yellow-400">
+                        <a class="text-md" href="https://reo-lang.vercel.app/contact" target="_blank">Contact</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </header>
     <img src="assets/reo-tagline.png" class="w-screen h-auto shadow-xl">
@@ -70,6 +102,16 @@
         <div class="rounded-lg bg-emerald-400 hover:bg-green-400 p-2">
             <a class="text-md text-center" href="https://reo-lang.vercel.app/documentation" target="_blank">Get Started!</a>
         </div>
-    </div>    
+    </div>
+    <script>
+        // Get the hamburger button and the mobile menu
+        const hamburgerButton = document.querySelector('.hamburger-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        // Add event listener to toggle the mobile menu
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');  // Toggle visibility of the mobile menu
+        });
+    </script>     
 </body>
 </html>
