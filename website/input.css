@@ -7,3 +7,11 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.radial-bg {
+    background: radial-gradient(black, rgb(47, 47, 48));
+}
+
+.linear-bg {
+    background: linear-gradient(black, rgb(23, 23, 23));
+}
